@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="input.css" />
+    <link rel="favicon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <title>password genrator</title>
+  </head>
+  <body class="bg-gradient-to-l from-blue-500 to-purple-500">
+    <form class="w-96 h-auto border-2 mx-auto mt-36 bg-indigo-300 p-6" action="">
+      <h2 class="text-center text-3xl font-semibold mb-2">Password Genrator</h2>
+      <hr class="m-1" />
+      <div class="flex">
+        <input
+          class="my-3 w-80 p-2 rounded-md"
+          type="text"
+          placeholder="please genrate password "
+          id="text"
+          required
+         
+        />
+        <i id="copyIcon" class="fa-regular fa-copy mt-5 -ml-5" title="Copy to clipboard"></i>
+        
+      </div>
+      <p class="text-xl">Password Length</p>
+      <div class="flex gap-2">
+        <input
+          class="w-80 p-2 "
+          type="range"
+          name=""
+          id="myrange"
+          min="3"
+          max="16"
+          value="8"
+        />
+        <span  id="rangevalue">8</span>
+      </div>
+      <div>
+        <p class="mb-2 text-xl">Password Settings</p>
+        <div class="flex-col  ">
+            <div>
+        <input type="radio" name="difficulty" value="easy" id="easy" />
+        <label for="Easy">Easy</label>
+    </div>
+    <div>
+        <input type="radio" name="difficulty" value="medium" id="medium" />
+        <label for="Medium">Medium</label>
+    </div>
+    <div>
+        <input type="radio" name="difficulty" value="hard" id="hard" />
+        <label for="Hard">Hard</label>
+    </div>
+    </div>
+      </div>
+      <div class="my-4">
+
+        <button class="border rounded-md w-80 mb-3 p-2 bg-slate-500" onclick=" generatepassword(event)">Generate Password</button>
+        <button class="border rounded-md w-80 mb-3 p-2 bg-slate-500" onclick=" generatepassword(event)">Regenerate Password</button>
+      </div>
+    </form>
+  
+
+    <script src="/main.js"></script>
+  </body>
+</html>
